@@ -1,0 +1,133 @@
+{
+  "parser": "babel-eslint",
+  "plugins": ["react", "babel", "flowtype"],
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "webpack.common.js"
+      }
+    }
+  },
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 2018,
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "extends": ["airbnb", "prettier", "prettier/flowtype", "prettier/react"],
+  "globals": {
+    "window": true,
+    "document": true,
+    "fetch": true
+  },
+  "rules": {
+    "arrow-body-style": "warn",
+    "camelcase": "warn",
+    "class-methods-use-this": "warn",
+    "consistent-return": "warn",
+    "default-case": "warn",
+    "dot-notation": "warn",
+    "eqeqeq": "warn",
+    "global-require": "warn",
+    "import/extensions": "warn",
+    "import/first": "warn",
+    "import/named": "warn",
+    "import/newline-after-import": "warn",
+    "import/no-duplicates": "warn",
+    "import/no-extraneous-dependencies": "warn",
+    "import/no-mutable-exports": "warn",
+    "import/no-named-default": "warn",
+    "import/no-useless-path-segments": "warn",
+    "import/order": [
+      "warn",
+      {
+        "newlines-between": "ignore",
+        "groups": ["builtin", "external", "parent", "sibling", "index"]
+      }
+    ],
+    "import/prefer-default-export": "warn",
+    "jsx-a11y/alt-text": "warn",
+    "jsx-a11y/anchor-is-valid": "warn",
+    "jsx-a11y/click-events-have-key-events": "warn",
+    "jsx-a11y/heading-has-content": "warn",
+    "jsx-a11y/label-has-for": "warn",
+    "jsx-a11y/no-noninteractive-element-interactions": "warn",
+    "jsx-a11y/no-static-element-interactions": "warn",
+    "lines-between-class-members": [
+      "error",
+      "always",
+      { "exceptAfterSingleLine": true }
+    ],
+    "new-cap": "warn",
+    "no-case-declarations": "warn",
+    "no-class-assign": "warn",
+    "no-console": "warn",
+    "no-dupe-keys": "warn",
+    "no-else-return": "warn",
+    "no-empty": "warn",
+    "no-extra-boolean-cast": "warn",
+    "no-nested-ternary": "warn",
+    "no-param-reassign": "warn",
+    "no-restricted-globals": "warn",
+    "no-restricted-syntax": "warn",
+    "no-return-assign": "warn",
+    "no-return-await": "warn",
+    "no-shadow": "warn",
+    "no-throw-literal": "warn",
+    "no-undef": "warn",
+    "no-underscore-dangle": "warn",
+    "no-unneeded-ternary": "warn",
+    "no-unused-expressions": "warn",
+    "no-unused-vars": "warn",
+    "no-use-before-define": "warn",
+    "no-useless-constructor": "warn",
+    "no-useless-return": "warn",
+    "no-var": "warn",
+    "object-shorthand": "warn",
+    "prefer-arrow-callback": "warn",
+    "prefer-const": "warn",
+    "prefer-destructuring": "warn",
+    "prefer-template": "warn",
+    "radix": "warn",
+    "react/button-has-type": "warn",
+    "react/destructuring-assignment": "warn",
+    "react/display-name": "warn",
+    "react/jsx-boolean-value": "warn",
+    "react/jsx-curly-brace-presence": "warn",
+    "react/jsx-filename-extension": "off",
+    "react/jsx-key": "warn",
+    "react/jsx-no-bind": "warn",
+    "react/no-access-state-in-setstate": "warn",
+    "react/no-array-index-key": "warn",
+    "react/no-children-prop": "warn",
+    "react/no-deprecated": "warn",
+    "react/no-did-update-set-state": "warn",
+    "react/no-multi-comp": "warn",
+    "react/no-unescaped-entities": "warn",
+    "react/no-unused-prop-types": "warn",
+    "react/no-unused-state": "warn",
+    "react/no-will-update-set-state": "warn",
+    "react/prefer-stateless-function": "warn",
+    "react/prop-types": "warn",
+    "react/sort-comp": [
+      "warn",
+      {
+        "order": [
+          "type-annotations",
+          "static-methods",
+          "lifecycle",
+          "everything-else",
+          "render"
+        ]
+      }
+    ],
+    "spaced-comment": "warn",
+    "vars-on-top": "warn",
+    "react/jsx-no-undef": "warn",
+    "no-lonely-if": "warn",
+    "react/require-default-props": "warn",
+    "react/jsx-no-duplicate-props": "warn",
+    "import/no-unresolved": "warn"
+  }
+}

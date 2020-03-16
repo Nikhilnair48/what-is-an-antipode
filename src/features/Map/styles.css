@@ -1,0 +1,21 @@
+.caption {
+  padding-top: 5px;
+}
+
+.map-header {
+  text-align: center;
+}
+
+.textbox {
+  min-height: 80px;
+  padding: 5px;
+  border: 1px solid black;
+}
+
+.textbox p {
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  display: inline-block;
+  line-height: 1.5;
+}

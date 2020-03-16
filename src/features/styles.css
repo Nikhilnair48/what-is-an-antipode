@@ -1,0 +1,51 @@
+.row {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.form-control {
+  border: none;
+}
+.my-content {
+  margin-top: 80px;
+}
+
+.row .react-geocoder input {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form .user-source {
+  margin-top: 80px;
+}
+.react-geocoder-results {
+  z-index: 10;
+  position: absolute;
+  right: 0;
+  padding: 0 15px;
+  width: 100%;
+}
+.react-geocoder-item {
+  background-color: grey;
+  border: 1px solid black;
+  padding: 2px;
+}
+
+.user-source div:nth-child(2) {
+  margin-left: 50vw;
+}
+.input-label {
+  text-align: center;
+}
+/* <div class="react-geocoder-results"><div class="react-geocoder-item" item="[object Object]">Asahan, Sumatera Utara, Indonesia</div><div class="react-geocoder-item" item="[object Object]">Asam Kumbang, Medan Selayang, 20133, Medan, Sumatera Utara, Indonesia</div><div class="react-geocoder-item" item="[object Object]">Asan-si, Chungcheongnam-do, South Korea</div><div class="react-geocoder-item" item="[object Object]">Asamkirche (St. Johann Nepomuk), Sendlinger Str. 32, München, Bayern 80331, Germany</div><div class="react-geocoder-item" item="[object Object]">Asam Asam, Jorong, 70881, Tanah Laut, Kalimantan Selatan, Indonesia</div></div> */
