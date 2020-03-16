@@ -24,6 +24,7 @@ const App = ({}) => {
   const [position, setPosition] = useState({});
   const [antipode, setAntipode] = useState({});
   const [error, setError] = useState(null);
+  const [pastSearches, appendToPastSearches] = useState([]);
 
   const onChange = ({ coords, timestamp }) => {
     setAntipodeCalculated(false);
@@ -34,6 +35,16 @@ const App = ({}) => {
       accuracy: coords.accuracy,
       timestamp
     });
+    let nPastSearches = [...pastSearches];
+    nPastSearches.push({
+      latitude: coords.latitude,
+      longitude: coords.longitude
+    });
+    if (nPastSearches.length > 5) {
+      nPastSearches.reverse();
+      nPastSearches = nPastSearches.slice(1, 5);
+    }
+    appendToPastSearches(nPastSearches);
     // setAntipode({
     //   latitude: coords.latitude * -1,
     //   longitude:
@@ -93,11 +104,29 @@ const App = ({}) => {
   const onSelected = customGeoCode => {
     setPosition(customGeoCode);
     setAntipodeCalculated(false);
+    let nPastSearches = [...pastSearches];
+    nPastSearches.push({
+      latitude: customGeoCode.latitude,
+      longitude: customGeoCode.longitude
+    });
+    if (nPastSearches.length > 5) {
+      nPastSearches.reverse();
+      nPastSearches = nPastSearches.slice(1, 5);
+    }
+    appendToPastSearches(nPastSearches);
+  };
+
+  const searchCoord = coord => {
+    setAntipodeCalculated(false);
+    setPosition({
+      latitude: coord.latitude,
+      longitude: coord.longitude
+    });
   };
 
   return (
     <div>
-      <MyNavBar />
+      <MyNavBar pastSearches={pastSearches} handleSearchClick={searchCoord} />
       <div className="my-content">
         <Row>
           <Col
